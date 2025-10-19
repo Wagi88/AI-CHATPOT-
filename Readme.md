@@ -6,7 +6,7 @@ Uses Python for backend logic and HTML/CSS/JS for the hacker-style frontend.
 
 ---
 
-🚀 Features  
+# 🚀 Features  
 • No API dependencies — 100% offline chatbot you can train yourself  
 • Python backend with a hybrid Markov + TF-IDF model  
 • Beautiful chat UI built with HTML/CSS/JS (dark hacker theme)  
@@ -16,7 +16,24 @@ Uses Python for backend logic and HTML/CSS/JS for the hacker-style frontend.
 
 ---
 
-🧩 Project Structure  
+# 🧩 Project Structure  
+
+#Update & install python, git, build tools
+pkg update && pkg upgrade -y
+pkg install python git clang fftw libjpeg-turbo -y   # libs helpful for pip wheels
+
+#Create venv
+python -m venv ~/ai-chat-venv
+source ~/ai-chat-venv/bin/activate
+
+#Install lightweight dependencies for Markov app
+pip install flask numpy scikit-learn
+
+#If you want to try LSTM (heavy):
+#pip install tensorflow    # may be large and fail on some Termux/Android setups
+#pip install flask numpy tensorflow scikit-learn
+
+
 
 ai-chat/  
 ├── backend/  
@@ -31,7 +48,7 @@ ai-chat/
 
 ---
 
-🧠 Training Your Model  
+# 🧠 Training Your Model  
 
 1. Create your first training file  
 mkdir -p backend/data  
@@ -54,7 +71,7 @@ PY
 
 ---
 
-💬 Run the Chat Server  
+# 💬 Run the Chat Server  
 
 cd backend  
 export MODEL_TYPE=markov  
@@ -68,7 +85,7 @@ You’ll see your local AI chatbot in action 😎
 
 ---
 
-🧠 How It Learns  
+# 🧠 How It Learns  
 
 This AI uses two simple but powerful systems:  
 • Markov chains — to learn how words connect naturally  
@@ -79,7 +96,7 @@ No categories or Q&A formats are required — it learns directly from your writi
 
 ---
 
-🎨 UI Design  
+# 🎨 UI Design  
 
 • Theme: Dark Hacker / Cyber Developer  
 • Colors: Blue, White, and Green (NUS student colors)  
@@ -87,7 +104,7 @@ No categories or Q&A formats are required — it learns directly from your writi
 
 ---
 
-⚡ Future Upgrades  
+#  Future Upgrades  
 
 ☑ Add LSTM neural model support  
 ☑ Add conversation memory system  
@@ -96,16 +113,16 @@ No categories or Q&A formats are required — it learns directly from your writi
 
 ---
 
-🧑‍💻 Created By  
+# 🧑‍💻 Created By  
 
-MR ROBOT  
+Toetu  Faafouina 
 “Learning AI from scratch — one line of Python at a time.”  
 
 Built proudly inside Termux, for students and developers everywhere.  
 
 ---
 
-🛡️ License  
+# 🛡️ License  
 
 MIT License — free to modify, share, and build on.  
 Just give credit and keep learning 🧠✨
